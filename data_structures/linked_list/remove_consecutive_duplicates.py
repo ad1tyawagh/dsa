@@ -20,7 +20,7 @@ def removeDuplicates(head):
 
     while t2 is not None:
         if t1.data == t2.data:
-            while t1.data == t2.data:
+            while t2 is not None and t1.data == t2.data:
                 temp = t2
                 t2 = t2.next
             t1.next = t2
