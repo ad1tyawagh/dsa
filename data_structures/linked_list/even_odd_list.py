@@ -18,6 +18,11 @@ def arrange_LinkedList(head):
     odd = []
     even = []
 
+    HEAD = head
+
+    if head is None or head.next is None:
+        return head
+
     while head is not None:
         if head.data % 2 == 0:
             even.append(head.data)
@@ -38,8 +43,11 @@ def arrange_LinkedList(head):
             tail = tail.next
     for num in even:
         node = Node(num)
-        tail.next = node
-        tail = tail.next
+        if tail is not None:
+            tail.next = node
+            tail = tail.next
+        else:
+            return HEAD
 
     return head
 
