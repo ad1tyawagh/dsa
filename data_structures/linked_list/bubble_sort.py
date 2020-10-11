@@ -36,8 +36,10 @@ def printll(head):
 
 
 # Main
+
 # Read the link list elements including -1
 arr = list(int(i) for i in input().strip().split(' '))
+
 # Create a Linked list after removing -1 from list
 l = ll(arr[:-1])
 l = bubbleSortLL(l)
