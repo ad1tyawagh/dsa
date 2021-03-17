@@ -4,6 +4,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 def midpoint_linkedlist(head):
     #  Given a linked list, find and return the midpoint.
     #############################
@@ -23,6 +24,7 @@ def midpoint_linkedlist(head):
 
     return slow
 
+
 def ll(arr):
     if len(arr) == 0:
         return None
@@ -36,7 +38,7 @@ def ll(arr):
 
 # Main
 # Read the link list elements including -1
-arr = list(int(i) for i in input().strip().split(' '))
+arr = list(int(i) for i in input().strip().split(" "))
 # Create a Linked list after removing -1 from list
 l = ll(arr[:-1])
 node = midpoint_linkedlist(l)

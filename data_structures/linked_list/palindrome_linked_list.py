@@ -1,55 +1,55 @@
 from sys import stdin, setrecursionlimit
-setrecursionlimit(10**5)
+
+setrecursionlimit(10 ** 5)
 
 
-#Following is the Node class already written for the Linked List
+# Following is the Node class already written for the Linked List
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-def isPalindrome(head): 
-      
-    # Temp pointer 
-    slow = head 
-  
-    # Declare a stack 
-    stack = [] 
-      
+def isPalindrome(head):
+
+    # Temp pointer
+    slow = head
+
+    # Declare a stack
+    stack = []
+
     ispalin = True
-  
-    # Push all elements of the list 
-    # to the stack 
-    while slow is not None: 
-        stack.append(slow.data) 
-          
-        # Move ahead 
-        slow = slow.next 
-  
-    # Iterate in the list again and 
-    # check by popping from the stack 
-    while head is not None: 
-  
-        # Get the top most element 
-        i = stack.pop() 
-          
-        # Check if data is not 
-        # same as popped element 
-        if head.data == i: 
+
+    # Push all elements of the list
+    # to the stack
+    while slow is not None:
+        stack.append(slow.data)
+
+        # Move ahead
+        slow = slow.next
+
+    # Iterate in the list again and
+    # check by popping from the stack
+    while head is not None:
+
+        # Get the top most element
+        i = stack.pop()
+
+        # Check if data is not
+        # same as popped element
+        if head.data == i:
             ispalin = True
-        else: 
+        else:
             ispalin = False
             break
-  
-        # Move ahead 
-        head = head.next 
-          
-    return ispalin 
+
+        # Move ahead
+        head = head.next
+
+    return ispalin
 
 
-
-#Taking Input Using Fast I/O
+# Taking Input Using Fast I/O
 def takeInput():
     head = None
     tail = None
@@ -74,7 +74,7 @@ def takeInput():
     return head
 
 
-#to print the linked list
+# to print the linked list
 def printLinkedList(head):
 
     while head is not None:
@@ -84,7 +84,7 @@ def printLinkedList(head):
     print()
 
 
-#main
+# main
 t = int(stdin.readline().rstrip())
 
 while t > 0:
@@ -92,8 +92,8 @@ while t > 0:
     head = takeInput()
 
     if isPalindrome(head):
-        print('true')
+        print("true")
     else:
-        print('false')
+        print("false")
 
     t -= 1

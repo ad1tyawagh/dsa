@@ -11,7 +11,7 @@ def gp_sum(n):
         return 1
 
     # sum of n terms
-    gpsum = (1/2) ** n + gp_sum(n-1)
+    gpsum = (1 / 2) ** n + gp_sum(n - 1)
 
     # return the sum
     return gpsum

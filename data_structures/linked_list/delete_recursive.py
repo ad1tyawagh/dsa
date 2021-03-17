@@ -37,7 +37,7 @@ def deleteRec(head, pos):
 
     # If position is more than number of nodes
     if temp is None:
-        return  head
+        return head
     if temp.next is None:
         return head
 
@@ -65,7 +65,7 @@ def ll(arr):
 
 def printll(head):
     while head:
-        print(head.data, end=' ')
+        print(head.data, end=" ")
         head = head.next
     print()
 
@@ -73,7 +73,7 @@ def printll(head):
 # Main
 setrecursionlimit(11000)
 # Read the link list elements including -1
-arr = list(int(i) for i in input().strip().split(' '))
+arr = list(int(i) for i in input().strip().split(" "))
 # Create a Linked list after removing -1 from list
 l = ll(arr[:-1])
 i = int(input())

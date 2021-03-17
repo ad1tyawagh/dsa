@@ -1,4 +1,3 @@
-
 from sys import stdin
 
 # Following is the Node class already written for the Linked List
@@ -19,6 +18,7 @@ def printIthNode(head, i):
             break
         curr = curr.next
         i -= 1
+
 
 # Taking Input Using Fast I/O
 

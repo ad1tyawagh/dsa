@@ -1,4 +1,5 @@
 from sys import stdin
+
 # Following is the Node class already written for the Linked List
 
 
@@ -30,6 +31,7 @@ def removeDuplicates(head):
             t2 = t2.next
 
     return head
+
 
 # Taking Input Using Fast I/O
 

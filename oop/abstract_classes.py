@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Automobile(ABC):
-
     def __init__(self):
         pass
 
@@ -20,7 +19,6 @@ class Automobile(ABC):
 
 
 class Car(Automobile):
-
     def __init__(self, make):
         super(Car, self).__init__()
         self.make = make
@@ -36,7 +34,6 @@ class Car(Automobile):
     def drive(self):
         pass
 
-    
+
 # c = Automobile()  # cant create objects of abstract class
 honda = Car("Honda")
-

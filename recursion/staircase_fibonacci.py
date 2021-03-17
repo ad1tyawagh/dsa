@@ -9,13 +9,13 @@ sys.setrecursionlimit(100000)
 
 def ways(steps):
     # base cases
-    wys = [-1 for _ in range(steps+1)]
+    wys = [-1 for _ in range(steps + 1)]
     wys[0] = 1
     wys[1] = 1
     wys[2] = 2
 
-    for i in range(3,steps+1):
-        wys[i] = wys[i-1] + wys[i-2] + wys[i-3]
+    for i in range(3, steps + 1):
+        wys[i] = wys[i - 1] + wys[i - 2] + wys[i - 3]
 
     return wys[steps]
 

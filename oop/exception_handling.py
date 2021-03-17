@@ -18,7 +18,9 @@ while True:
     #     print("Division by 0")
 
     except (ValueError, ZeroDivisionError):
-        print("Use integer values in numerator and non-zero integer values in denominator.")
+        print(
+            "Use integer values in numerator and non-zero integer values in denominator."
+        )
 
     # Default exception should be at the last.
     # except:

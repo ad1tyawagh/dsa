@@ -37,7 +37,7 @@ def merge(head1, head2):
         return head1
 
     if head1.data <= head2.data:
-        temp =  head1
+        temp = head1
         temp.next = merge(head1.next, head2)
         return temp
     else:
@@ -53,7 +53,7 @@ def mergeSort(head):
 
     # get the middle point
     mid = midpoint(head)
-    # store the head of right half 
+    # store the head of right half
     next2mid = mid.next
     # point the left half's end to None
     mid.next = None
@@ -79,14 +79,14 @@ def ll(arr):
 
 def printll(head):
     while head:
-        print(head.data, end=' ')
+        print(head.data, end=" ")
         head = head.next
     print()
 
 
 # Main
 # Read the link list elements including -1
-arr = list(int(i) for i in input().strip().split(' '))
+arr = list(int(i) for i in input().strip().split(" "))
 # Create a Linked list after removing -1 from list
 l = ll(arr[:-1])
 l = mergeSort(l)

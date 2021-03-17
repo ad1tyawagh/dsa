@@ -12,6 +12,3 @@ while True:
         print(a / b)
     except ValueError:
         print("Numerator and denominator must be integers!")
-
-
-

@@ -26,17 +26,17 @@ def ll(arr):
 
 def printll(head):
     while head:
-        print(head.data, end=' ')
+        print(head.data, end=" ")
         head = head.next
     print()
 
 
 # Main
 # Read the link list elements including -1
-arr = list(int(i) for i in input().strip().split(' '))
+arr = list(int(i) for i in input().strip().split(" "))
 
 # Create a Linked list after removing -1 from list
 l = ll(arr[:-1])
-i, j = list(int(i) for i in input().strip().split(' '))
+i, j = list(int(i) for i in input().strip().split(" "))
 l = swap_nodes(l, i, j)
 printll(l)

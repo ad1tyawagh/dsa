@@ -1,5 +1,4 @@
 class Vehicle:
-    
     def __init__(self, color, max_speed):
         self.color = color
         # Private to the vehicle class
@@ -17,12 +16,11 @@ class Vehicle:
 
 
 class Car(Vehicle):
-    
     def __init__(self, color, max_speed, gear_count, brand):
         super().__init__(color, max_speed)
         self.gear_count = gear_count
         self.brand = brand
-        
+
     def print_details(self):
         super().print_details()
         print("Gear Count:", str(self.gear_count))

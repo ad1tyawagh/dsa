@@ -1,4 +1,4 @@
-def move_discs(n, source, destination,  auxiliary):
+def move_discs(n, source, destination, auxiliary):
     # base case
     if n == 0:
         return
@@ -18,4 +18,4 @@ def move_discs(n, source, destination,  auxiliary):
 
 
 n_disks = int(input())
-move_discs(n_disks, 'a', 'c', 'b')
+move_discs(n_disks, "a", "c", "b")

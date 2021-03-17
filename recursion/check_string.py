@@ -15,15 +15,15 @@ def check_string(string):
         return True
 
     # check whether the first char is a
-    if string[0] == 'a':
+    if string[0] == "a":
         if len(string[1:]) == 0:
             return True
-        elif string[1] == 'a':
+        elif string[1] == "a":
             return check_string(string[1:])
-        elif string[1] == 'b':
-            if string[2] == 'b' and len(string[3:]) == 0:
+        elif string[1] == "b":
+            if string[2] == "b" and len(string[3:]) == 0:
                 return True
-            elif string[2] == 'b' and string[3] == 'a':
+            elif string[2] == "b" and string[3] == "a":
                 return check_string(string[3:])
 
     return False
@@ -32,6 +32,6 @@ def check_string(string):
 s = input()
 
 if check_string(s):
-    print('true')
+    print("true")
 else:
-    print('false')
+    print("false")

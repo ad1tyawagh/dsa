@@ -12,13 +12,13 @@ def count_zeroes(number):
     if len(temp) == 0:
         return 0
     if len(temp) == 1:
-        if temp == '0':
+        if temp == "0":
             return 1
         else:
             return 0
 
     # counting zeroes
-    if temp[0] == '0':
+    if temp[0] == "0":
         zeroes = 1 + count_zeroes(temp[1:])
     else:
         zeroes = count_zeroes(temp[1:])

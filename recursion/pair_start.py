@@ -17,7 +17,7 @@ def pair_star(string):
     # check first element and second then check the rest of the string
     # starting from second element
     if string[0] == string[1]:
-        temp = string[0] + '*' + pair_star(string[1:])
+        temp = string[0] + "*" + pair_star(string[1:])
     else:
         temp = string[0] + pair_star(string[1:])
 

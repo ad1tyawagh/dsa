@@ -1,4 +1,3 @@
-
 from sys import stdin
 
 # Following is the Node class already written for the Linked List
@@ -20,9 +19,11 @@ def findNode(head, n):
         if curr.data == n:
             return position
         curr = curr.next
-        position = position+1
+        position = position + 1
 
     return -1
+
+
 # Taking Input Using Fast I/O
 
 

@@ -1,5 +1,4 @@
 class Mother:
-
     def __init__(self):
         self.name = "Vaishali"
 
@@ -8,7 +7,6 @@ class Mother:
 
 
 class Father:
-
     def __init__(self):
         self.name = "Mohan"
 
@@ -17,7 +15,6 @@ class Father:
 
 
 class Child(Father, Mother):
-
     def __init__(self, name):
         self.name = name
 
@@ -25,6 +22,6 @@ class Child(Father, Mother):
         super().print()
 
 
-child = Child('Aditya')
+child = Child("Aditya")
 child.print()  # calls print function of father since it comes first in the argument order of inheritance
 Child.mro()  # prints the method resolution order

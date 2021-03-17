@@ -1,9 +1,9 @@
 from sys import setrecursionlimit, stdin
 
-setrecursionlimit(10**6)
+setrecursionlimit(10 ** 6)
 
 
-#Following is the Node class already written for the Linked List
+# Following is the Node class already written for the Linked List
 class Node:
     def __init__(self, data):
         self.data = data
@@ -11,7 +11,7 @@ class Node:
 
 
 def printReverse(head):
-    #Your code goes here
+    # Your code goes here
     if head is None:
         return
     if head.next is None:
@@ -23,7 +23,7 @@ def printReverse(head):
     return
 
 
-#Taking Input Using Fast I/O
+# Taking Input Using Fast I/O
 def takeInput():
     head = None
     tail = None
@@ -48,7 +48,7 @@ def takeInput():
     return head
 
 
-#to print the linked list
+# to print the linked list
 def printLinkedList(head):
 
     while head is not None:
@@ -58,7 +58,7 @@ def printLinkedList(head):
     print()
 
 
-#main
+# main
 t = int(stdin.readline().rstrip())
 
 while t > 0:
