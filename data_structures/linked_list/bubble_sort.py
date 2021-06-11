@@ -13,11 +13,11 @@ def swap(n1, n2, p, n):
     pass
 
 
-def bubbleSortLL(head):
+def bubblesort_linked_list(head):
     pass
 
 
-def ll(arr):
+def make_linked_list(arr):
     if len(arr) == 0:
         return None
     head = Node(arr[0])
@@ -28,7 +28,7 @@ def ll(arr):
     return head
 
 
-def printll(head):
+def print_linked_list(head):
     while head:
         print(head.data, end=" ")
         head = head.next
@@ -41,6 +41,6 @@ def printll(head):
 arr = list(int(i) for i in input().strip().split(" "))
 
 # Create a Linked list after removing -1 from list
-l = ll(arr[:-1])
-l = bubbleSortLL(l)
-printll(l)
+l = make_linked_list(arr[:-1])
+l = bubblesort_linked_list(l)
+print_linked_list(l)

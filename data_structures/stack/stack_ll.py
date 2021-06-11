@@ -30,9 +30,9 @@ class Stack:
 
     def push(self, data):
         # Implement the push(element) function
-        newNode = Node(data)
-        newNode.next = self.head
-        self.head = newNode
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
         self.count = self.count + 1
 
     def pop(self):

@@ -28,7 +28,7 @@ def isEmpty(stack):
 
 
 # Taking input using fast I/o method
-def takeInput():
+def take_input():
     size = int(stdin.readline().strip())
     inputStack = list()
 
@@ -42,7 +42,7 @@ def takeInput():
 
 
 # Main
-inputStack = takeInput()
+inputStack = take_input()
 emptyStack = list()
 
 reverseStack(inputStack, emptyStack)

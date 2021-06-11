@@ -36,7 +36,7 @@ def merge(head1, head2):
         return head2
 
 
-def ll(arr):
+def make_linked_list(arr):
     if len(arr) == 0:
         return None
     head = Node(arr[0])
@@ -47,7 +47,7 @@ def ll(arr):
     return head
 
 
-def printll(head):
+def print_linked_list(head):
     while head:
         print(head.data, end=" ")
         head = head.next
@@ -60,7 +60,7 @@ arr1 = list(int(i) for i in input().strip().split(" "))
 arr2 = list(int(i) for i in input().strip().split(" "))
 
 # Create a Linked list after removing -1 from list
-l1 = ll(arr1[:-1])
-l2 = ll(arr2[:-1])
+l1 = make_linked_list(arr1[:-1])
+l2 = make_linked_list(arr2[:-1])
 l = merge(l1, l2)
-printll(l)
+print_linked_list(l)

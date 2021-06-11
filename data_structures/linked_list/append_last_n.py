@@ -7,28 +7,28 @@ class Node:
         self.next = None
 
 
-def length(head):
-    curr = head
-    length = 0
-    while curr is not None:
-        length += 1
-        curr = curr.next
+def length_of_list(head):
+    current_node = head
+    length_of_list = 0
+    while current_node is not None:
+        length_of_list += 1
+        current_node = current_node.next
 
-    return length
+    return length_of_list
 
 
-def appendLastNToFirst(head, n):
+def append_last_n_to_first(head, n):
     # Your code goes here
-    if n >= length(head) or n == 0:
+    if n >= length_of_list(head) or n == 0:
         return head
-    req_pos = length(head) - n - 1
-    curr = head
+    req_pos = length_of_list(head) - n - 1
+    current_node = head
     while req_pos > 0:
-        curr = curr.next
+        current_node = current_node.next
         req_pos -= 1
 
-    last_n = curr.next
-    curr.next = None
+    last_n = current_node.next
+    current_node.next = None
     temp = last_n
     while temp.next is not None:
         temp = temp.next
@@ -36,24 +36,24 @@ def appendLastNToFirst(head, n):
     return last_n
 
 
-def takeInput():
+def take_input():
     head = None
     tail = None
 
-    datas = list(map(int, stdin.readline().rstrip().split(" ")))
+    list_of_data = list(map(int, stdin.readline().rstrip().split(" ")))
 
     i = 0
-    while (i < len(datas)) and (datas[i] != -1):
-        data = datas[i]
-        newNode = Node(data)
+    while (i < len(list_of_data)) and (list_of_data[i] != -1):
+        data = list_of_data[i]
+        new_node = Node(data)
 
         if head is None:
-            head = newNode
-            tail = newNode
+            head = new_node
+            tail = new_node
 
         else:
-            tail.next = newNode
-            tail = newNode
+            tail.next = new_node
+            tail = new_node
 
         i += 1
 
@@ -61,7 +61,7 @@ def takeInput():
 
 
 # to print the linked list
-def printLinkedList(head):
+def print_linked_list(head):
 
     while head is not None:
         print(head.data, end=" ")
@@ -71,14 +71,14 @@ def printLinkedList(head):
 
 
 # main
-t = int(stdin.readline().rstrip())
+num_testcases = int(stdin.readline().rstrip())
 
-while t > 0:
+while num_testcases > 0:
 
-    head = takeInput()
+    head = take_input()
     n = int(stdin.readline().rstrip())
 
-    head = appendLastNToFirst(head, n)
-    printLinkedList(head)
+    head = append_last_n_to_first(head, n)
+    print_linked_list(head)
 
-    t -= 1
+    num_testcases -= 1

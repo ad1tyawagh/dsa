@@ -1,82 +1,78 @@
 from sys import stdin
 
 # Following is the Node class already written for the Linked List
-
-
 class Node:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, list_of_data):
+        self.list_of_data = list_of_data
         self.next = None
 
 
-def removeDuplicates(head):
-    # Your code goes here
+def remove_duplicates(head):
+
     # empty list
     if head == None or head.next == None:
         return head
 
     # traverse the list
-    t1 = head
-    t2 = head.next
+    temp1 = head
+    temp2 = head.next
 
-    while t2 is not None:
-        if t1.data == t2.data:
-            while t2 is not None and t1.data == t2.data:
-                temp = t2
-                t2 = t2.next
-            t1.next = t2
+    while temp2 is not None:
+        if temp1.list_of_data == temp2.list_of_data:
+            while temp2 is not None and temp1.list_of_data == temp2.list_of_data:
+                temp = temp2
+                temp2 = temp2.next
+            temp1.next = temp2
             temp.next = None
         else:
-            t1 = t1.next
-            t2 = t2.next
+            temp1 = temp1.next
+            temp2 = temp2.next
 
     return head
 
 
 # Taking Input Using Fast I/O
-
-
-def takeInput():
+def take_input():
+    
     head = None
     tail = None
 
-    datas = list(map(int, stdin.readline().rstrip().split(" ")))
+    list_of_data = list(map(int, stdin.readline().rstrip().split(" ")))
 
-    i = 0
-    while (i < len(datas)) and (datas[i] != -1):
-        data = datas[i]
-        newNode = Node(data)
+    count = 0
+    while (count < len(list_of_data)) and (list_of_data[count] != -1):
+        data = list_of_data[count]
+        new_node = Node(data)
 
         if head is None:
-            head = newNode
-            tail = newNode
+            head = new_node
+            tail = new_node
 
         else:
-            tail.next = newNode
-            tail = newNode
+            tail.next = new_node
+            tail = new_node
 
-        i += 1
+        count += 1
 
     return head
 
 
-# to print the linked list
-def printLinkedList(head):
+def print_linked_list(head):
 
     while head is not None:
-        print(head.data, end=" ")
+        print(head.list_of_data, end=" ")
         head = head.next
 
     print()
 
 
 # main
-t = int(stdin.readline().strip())
+num_testcases = int(stdin.readline().strip())
 
-while t > 0:
-    head = takeInput()
+while num_testcases > 0:
+    head = take_input()
 
-    head = removeDuplicates(head)
-    printLinkedList(head)
+    head = remove_duplicates(head)
+    print_linked_list(head)
 
-    t -= 1
+    num_testcases -= 1

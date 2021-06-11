@@ -52,7 +52,7 @@ def deleteRec(head, pos):
     return head
 
 
-def ll(arr):
+def make_linked_list(arr):
     if len(arr) == 0:
         return None
     head = Node(arr[0])
@@ -63,7 +63,7 @@ def ll(arr):
     return head
 
 
-def printll(head):
+def print_linked_list(head):
     while head:
         print(head.data, end=" ")
         head = head.next
@@ -75,7 +75,7 @@ setrecursionlimit(11000)
 # Read the link list elements including -1
 arr = list(int(i) for i in input().strip().split(" "))
 # Create a Linked list after removing -1 from list
-l = ll(arr[:-1])
+l = make_linked_list(arr[:-1])
 i = int(input())
 l = deleteRec(l, i)
-printll(l)
+print_linked_list(l)

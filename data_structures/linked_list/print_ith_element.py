@@ -23,24 +23,24 @@ def printIthNode(head, i):
 # Taking Input Using Fast I/O
 
 
-def takeInput():
+def take_input():
     head = None
     tail = None
 
-    datas = list(map(int, stdin.readline().rstrip().split(" ")))
+    list_of_data = list(map(int, stdin.readline().rstrip().split(" ")))
 
     i = 0
-    while (i < len(datas)) and (datas[i] != -1):
-        data = datas[i]
-        newNode = Node(data)
+    while (i < len(list_of_data)) and (list_of_data[i] != -1):
+        data = list_of_data[i]
+        new_node = Node(data)
 
         if head is None:
-            head = newNode
-            tail = newNode
+            head = new_node
+            tail = new_node
 
         else:
-            tail.next = newNode
-            tail = newNode
+            tail.next = new_node
+            tail = new_node
 
         i += 1
 
@@ -48,7 +48,7 @@ def takeInput():
 
 
 # to print the linked list
-def printLinkedList(head):
+def print_linked_list(head):
 
     while head is not None:
         print(head.data, end=" ")
@@ -58,12 +58,12 @@ def printLinkedList(head):
 
 
 # main
-t = int(stdin.readline().rstrip())
+num_testcases = int(stdin.readline().rstrip())
 
-while t > 0:
+while num_testcases > 0:
 
-    head = takeInput()
+    head = take_input()
     i = int(stdin.readline().rstrip())
     printIthNode(head, i)
 
-    t -= 1
+    num_testcases -= 1

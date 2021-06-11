@@ -1,16 +1,23 @@
+from sys import setrecursionlimit
+
+setrecursionlimit(11000)
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-def reverseRecursive(head):
+# Reverse a linked list recursively and return the head pointer
+def reverse_recursive(head):
 
+    # No need to do anything if list is empty or has a single element
     if head is None or head.next is None:
         return head
 
     # Reverse the rest of the list
-    rest = reverseRecursive(head.next)
+    rest = reverse_recursive(head.next)
 
     # Put first element at the end
     head.next.next = head
@@ -20,7 +27,7 @@ def reverseRecursive(head):
     return rest
 
 
-def ll(arr):
+def generate_linked_list(arr):
     if len(arr) == 0:
         return None
     head = Node(arr[0])
@@ -31,20 +38,17 @@ def ll(arr):
     return head
 
 
-def printll(head):
+def print_linked_list(head):
     while head:
         print(head.data, end=" ")
         head = head.next
     print()
 
 
-# Main
-from sys import setrecursionlimit
-
-setrecursionlimit(11000)
 # Read the link list elements including -1
 arr = list(int(i) for i in input().strip().split(" "))
+
 # Create a Linked list after removing -1 from list
-l = ll(arr[:-1])
-l = reverseRecursive(l)
-printll(l)
+l = generate_linked_list(arr[:-1])
+l = reverse_recursive(l)
+print_linked_list(l)
